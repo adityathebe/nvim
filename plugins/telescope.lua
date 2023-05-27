@@ -1,11 +1,9 @@
 return {
-  "nvim-neo-tree/neo-tree.nvim",
+  "nvim-telescope/telescope.nvim",
   opts = function(_, opts)
     opts.filesystem = {
       filtered_items = {
-        visible = false,
-        hide_gitignored = false,
-        hide_dotfiles = false,
+        hidden = true,
         never_show = {
           ".git",
           "node_modules",
