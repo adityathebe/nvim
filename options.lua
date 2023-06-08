@@ -1,7 +1,9 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
+    termguicolors = true,
     background = "dark", -- sets vim.opt.background
+    cursorline = true, -- highlight the current line
     -- set to true or false etc.
     relativenumber = true, -- sets vim.opt.relativenumber
     number = true, -- sets vim.opt.number
