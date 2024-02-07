@@ -3,7 +3,7 @@ return {
   opts = function(_, opts)
     opts.filesystem = {
       filtered_items = {
-        hidden = true,
+        hidden = false,
         never_show = {
           ".git",
           "node_modules",
@@ -11,9 +11,9 @@ return {
           ".DS_Store",
         },
         always_show = {
-          ".gitignore"
-        }
-      }
+          ".gitignore",
+        },
+      },
     }
   end,
 }

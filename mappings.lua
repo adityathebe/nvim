@@ -28,6 +28,10 @@ return {
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", desc = "window right" },
     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", desc = "window down" },
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", desc = "window up" },
+
+    -- Navigation
+    ["J"] = { "10jzz", desc = "Move down" },
+    ["K"] = { "10kzz", desc = "Move up" },
   },
   t = {
     -- setting a mapping to false will disable it
