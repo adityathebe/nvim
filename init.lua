@@ -1,4 +1,13 @@
 return {
+  options = {
+    opt = {
+      relativenumber = true,
+      number = true,
+      shiftwidth = 2,
+      tabstop = 2,
+    },
+  },
+
   -- Configure AstroNvim updates
   updater = {
     remote = "origin", -- remote to use
