@@ -1,15 +1,19 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
-    termguicolors = true,
     background = "dark", -- sets vim.opt.background
     cursorline = true, -- highlight the current line
-    -- set to true or false etc.
-    relativenumber = true, -- sets vim.opt.relativenumber
-    number = true, -- sets vim.opt.number
-    spell = false, -- sets vim.opt.spell
+    linebreak = true, -- breaks by word instead of char
+    number = true,
+    relativenumber = true,
+    shiftwidth = 2,
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-    wrap = false, -- sets vim.opt.wrap
+    spell = false, -- sets vim.opt.spell
+    tabstop = 2,
+    termguicolors = true,
+    textwidth = 0,
+    wrap = true,
+    wrapmargin = 0,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
