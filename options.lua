@@ -1,19 +1,35 @@
 -- set vim options here (vim.<first_key>.<second_key> = value)
 return {
   opt = {
-    background = "dark", -- sets vim.opt.background
+    background = "dark",
+    termguicolors = true,
+
     cursorline = true, -- highlight the current line
-    linebreak = true, -- breaks by word instead of char
     number = true,
     relativenumber = true,
-    shiftwidth = 2,
-    signcolumn = "auto", -- sets vim.opt.signcolumn to auto
-    spell = false, -- sets vim.opt.spell
-    tabstop = 2,
-    termguicolors = true,
+
+    spell = false,
+    colorcolumn = "80",
+    signcolumn = "auto",
+
+    -- always keep 8 lines above/below the cursor (unless start/end of file)
+    scrolloff = 8,
+
+    -- search
+    ignorecase = true,
+    smartcase = true,
+
+    -- line break stuff
+    breakindent = true, -- smart indentation
+    linebreak = true, -- breaks by word instead of char
     textwidth = 0,
     wrap = true,
     wrapmargin = 0,
+
+    -- tab/space stuff
+    shiftwidth = 2,
+    tabstop = 2,
+    expandtab = true,
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
@@ -25,12 +41,3 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
   },
 }
--- If you need more control, you can use the function()...end notation
--- return function(local_vim)
---   local_vim.opt.relativenumber = true
---   local_vim.g.mapleader = " "
---   local_vim.opt.whichwrap = vim.opt.whichwrap - { 'b', 's' } -- removing option from list
---   local_vim.opt.shortmess = vim.opt.shortmess + { I = true } -- add to option list
---
---   return local_vim
--- end

@@ -6,23 +6,6 @@
 return {
   -- first key is the mode
   n = {
-    -- second key is the lefthand side of the map
-    -- mappings seen under group name "Buffer"
-    ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>bD"] = {
-      function()
-        require("astronvim.utils.status").heirline.buffer_picker(
-          function(bufnr) require("astronvim.utils.buffer").close(bufnr) end
-        )
-      end,
-      desc = "Pick to close",
-    },
-    -- tables with the `name` key will be registered with which-key if it's installed
-    -- this is useful for naming menus
-    ["<leader>b"] = { name = "Buffers" },
-    -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-
     -- vim-tmux-navigator
     ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", desc = "window left" },
     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", desc = "window right" },
@@ -30,8 +13,8 @@ return {
     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", desc = "window up" },
 
     -- Navigation
-    ["J"] = { "10jzz", desc = "Move down" },
-    ["K"] = { "10kzz", desc = "Move up" },
+    ["J"] = { "15jzz", desc = "Move down" },
+    ["K"] = { "15kzz", desc = "Move up" },
   },
   t = {
     -- setting a mapping to false will disable it
