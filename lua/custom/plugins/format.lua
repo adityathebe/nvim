@@ -34,6 +34,7 @@ return { -- Autoformat
       lua = { 'stylua' },
       markdown = { 'prettier' },
       go = { 'gofumpt', 'goimports-reviser', 'golines' },
+      yaml = { 'prettier' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
