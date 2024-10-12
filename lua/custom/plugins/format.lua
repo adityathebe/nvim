@@ -33,6 +33,7 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       markdown = { 'prettier' },
+      go = { 'gofumpt', 'goimports-reviser', 'golines' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
