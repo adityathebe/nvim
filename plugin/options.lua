@@ -1,7 +1,7 @@
 -- Set options
 vim.opt.background = 'dark'
 vim.opt.breakindent = true
-vim.opt.colorcolumn = '80'
+vim.opt.colorcolumn = '120'
 vim.opt.cursorline = true
 vim.opt.expandtab = true
 vim.opt.ignorecase = true

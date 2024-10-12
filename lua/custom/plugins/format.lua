@@ -35,6 +35,7 @@ return { -- Autoformat
       markdown = { 'prettier' },
       go = { 'gofumpt', 'goimports-reviser', 'golines' },
       yaml = { 'prettier' },
+      sql = { 'pg_format' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --

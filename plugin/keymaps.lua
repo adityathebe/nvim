@@ -24,3 +24,5 @@ vim.keymap.set('n', '<M-s>', '<C-W>-')
 -- Navigation
 vim.keymap.set('n', 'J', '15jzz', { desc = 'Move down' })
 vim.keymap.set('n', 'K', '15kzz', { desc = 'Move up' })
+
+vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
