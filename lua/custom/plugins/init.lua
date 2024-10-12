@@ -33,8 +33,8 @@ return {
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'catppuccin'
+    config = function()
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   }, -- Highlight todo, notes, etc in comments
 
