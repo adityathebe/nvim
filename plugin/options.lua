@@ -26,7 +26,6 @@ vim.opt.wrap = true
 vim.opt.wrapmargin = 0
 
 -- Set global variables
-vim.g.have_nerd_font = true
 vim.g.autoformat_enabled = true
 vim.g.autopairs_enabled = true
 vim.g.cmp_enabled = true

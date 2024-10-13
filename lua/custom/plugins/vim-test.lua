@@ -3,8 +3,8 @@ return {
   lazy = false,
   dependencies = { 'preservim/vimux' },
   keys = {
-    { '<leader>t', '<cmd>TestNearest<cr>', desc = 'Test nearest' },
-    { '<leader>a', '<cmd>TestSuite<CR>', desc = 'Test suite' },
+    { '<leader>tn', '<cmd>TestNearest<cr>', desc = 'Test nearest' },
+    { '<leader>ts', '<cmd>TestSuite<CR>', desc = 'Test suite' },
   },
   config = function()
     -- set strategy
