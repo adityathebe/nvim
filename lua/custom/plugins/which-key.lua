@@ -10,7 +10,7 @@ return {
   config = function()
     local wk = require 'which-key'
     wk.add {
-      { '<leader>s', group = '[S]earch' },
+      { '<leader>f', group = '[F]ind' },
       { '<leader>g', group = '[G]it' },
       { '<leader>l', group = '[L]SP' },
     }

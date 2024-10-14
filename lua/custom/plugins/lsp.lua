@@ -75,15 +75,9 @@ return {
         -- Jump to the type of the word under your cursor.
         --  Useful when you're not sure what type a variable is and you want to see
         --  the definition of its *type*, not where it was *defined*.
-        map('gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype')
+        map('gy', require('telescope.builtin').lsp_type_definitions, '[G]oto t[Y]pe definition')
 
-        -- Fuzzy find all the symbols in your current document.
-        --  Symbols are things like variables, functions, types, etc.
-        map('<leader>lsd', require('telescope.builtin').lsp_document_symbols, '[S]ymbols [D]ocument')
-
-        -- Fuzzy find all the symbols in your current workspace.
-        --  Similar to document symbols, except searches over your entire project.
-        map('<leader>lsw', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[S]ymbols [W]orkspace')
+        map('K', vim.lsp.buf.hover, 'Hover')
 
         -- Rename the variable under your cursor.
         --  Most Language Servers support renaming across files, etc.
