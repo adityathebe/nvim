@@ -29,6 +29,15 @@ return {
     lazy = false,
   },
 
+  --   priority = 1000,
+  --   config = function()
+  --     require('astrotheme').setup {
+  --       palette = 'astrodark',
+  --     }
+  --     -- vim.cmd.colorscheme 'astrodark'
+  --   end,
+  -- },
+
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -36,7 +45,7 @@ return {
     config = function()
       vim.cmd.colorscheme 'catppuccin-mocha'
     end,
-  }, -- Highlight todo, notes, etc in comments
+  },
 
   {
     'folke/todo-comments.nvim',
