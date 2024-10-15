@@ -33,7 +33,7 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       markdown = { 'prettier' },
-      go = { 'gofumpt', 'goimports-reviser', 'golines' },
+      go = { 'goimports', 'gofumpt' },
       yaml = { 'prettier' },
       sql = { 'pg_format' },
       -- Conform can also run multiple formatters sequentially
@@ -43,8 +43,8 @@ return { -- Autoformat
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
     },
     formatters = {
-      ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
-      golines = { prepend_args = { '--max-len=120' } },
+      -- ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
+      golines = { prepend_args = { '--max-len=120', '--tab-len=2', '--ignore-generated', '--chain-split-dots' } },
     },
   },
 }
