@@ -34,3 +34,6 @@ vim.g.cmp_enabled = true
 vim.g.diagnostics_mode = 3
 vim.g.icons_enabled = true
 vim.g.ui_notifications_enabled = true
+
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1

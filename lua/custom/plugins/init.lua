@@ -22,29 +22,12 @@ return {
       },
     },
   },
+
   { 'Bilal2453/luvit-meta', lazy = true },
 
   {
     'christoomey/vim-tmux-navigator',
     lazy = false,
-  },
-
-  --   priority = 1000,
-  --   config = function()
-  --     require('astrotheme').setup {
-  --       palette = 'astrodark',
-  --     }
-  --     -- vim.cmd.colorscheme 'astrodark'
-  --   end,
-  -- },
-
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
   },
 
   {

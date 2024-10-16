@@ -47,7 +47,6 @@ return {
       end,
     },
     filesystem = {
-      hijack_netrw_behavior = 'open_current',
       follow_current_file = {
         enabled = true, -- This will find and focus the file in the active buffer every time
         --              -- the current file is changed while the tree is open.
@@ -67,6 +66,8 @@ return {
         },
       },
       window = {
+        position = 'right',
+        width = 60,
         mappings = {
           ['\\'] = 'close_window',
           h = 'parent_or_close',
