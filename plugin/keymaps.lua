@@ -1,6 +1,6 @@
 -- Toggle comment
-vim.keymap.set('n', '<leader>/', 'gcc', { desc = 'Toggle comment for current line', remap = true })
-vim.keymap.set('v', '<leader>/', 'gcc', { desc = 'Toggle comment for current line', remap = true })
+vim.keymap.set('n', '<C-/>', 'gcc', { desc = 'Toggle comment for current line', remap = true })
+vim.keymap.set('v', '<C-/>', 'gcc', { desc = 'Toggle comment for current line', remap = true })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

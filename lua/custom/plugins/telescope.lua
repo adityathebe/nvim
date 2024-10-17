@@ -82,6 +82,18 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+    -- Slightly advanced example of overriding default behavior and theme
+    vim.keymap.set('n', '<leader>/', function()
+      -- Use the default layout instead of dropdown
+      builtin.current_buffer_fuzzy_find {
+        layout_strategy = 'horizontal',
+        layout_config = {
+          height = 0.4, -- Set height to 40% of the screen
+          preview_width = 0.6,
+        },
+      }
+    end, { desc = '[/] Fuzzily search in current buffer' })
+
     -- Fuzzy find all the symbols in your current document.
     --  Symbols are things like variables, functions, types, etc.
     vim.keymap.set('n', '<leader>fsd', builtin.lsp_document_symbols, { desc = '[S]ymbols [D]ocument' })
