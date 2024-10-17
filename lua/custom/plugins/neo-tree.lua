@@ -13,6 +13,12 @@ return {
   lazy = false,
   opts = {
     enable_git_status = true,
+
+    -- lifesaver !!
+    -- this will prevent neo-tree from taking over the entire tab
+    -- when the buffer is closed.
+    close_if_last_window = true,
+
     buffers = {
       follow_current_file = {
         enabled = true, -- This will find and focus the file in the active buffer every time
