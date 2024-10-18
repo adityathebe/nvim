@@ -44,7 +44,7 @@ return { -- Autoformat
     },
     formatters = {
       -- ['goimports-reviser'] = { prepend_args = { '-rm-unused' } },
-      golines = { prepend_args = { '--max-len=120', '--tab-len=2', '--ignore-generated', '--chain-split-dots' } },
+      golines = { prepend_args = { '--max-len=180', '--tab-len=2', '--ignore-generated', '--chain-split-dots' } },
     },
   },
 }
