@@ -7,6 +7,9 @@ return {
 
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
+
+    -- Schema information
+    "b0o/SchemaStore.nvim",
   },
   config = function()
     --  This function gets run when an LSP attaches to a particular buffer.
@@ -117,6 +120,33 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
+      bashls = {},
+      jsonls = {
+        server_capabilities = {
+          documentFormattingProvider = false,
+        },
+        settings = {
+          json = {
+            schemas = require("schemastore").json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      },
+      marksman = {},
+      ts_ls = {},
+      yamlls = {
+        settings = {
+          yaml = {
+            schemaStore = {
+              enable = false,
+              url = "",
+            },
+          },
+        },
+        schemas = {
+          ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+        },
+      },
       gopls = {
         settings = {
           gopls = {
