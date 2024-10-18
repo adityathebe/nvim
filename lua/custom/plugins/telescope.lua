@@ -92,7 +92,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     vim.keymap.set('n', '<leader>fw', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
     -- Slightly advanced example of overriding default behavior and theme
-    vim.keymap.set('n', '<leader>/', function()
+    vim.keymap.set('n', '<leader>fb', function()
       -- Use the default layout instead of dropdown
       builtin.current_buffer_fuzzy_find {
         layout_strategy = 'horizontal',
