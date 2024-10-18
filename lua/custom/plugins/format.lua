@@ -33,7 +33,7 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       markdown = { 'prettier' },
-      go = { 'goimports', 'gofumpt', 'golines' },
+      go = { 'goimports', 'gofmt', 'golines' },
       yaml = { 'prettier' },
       sql = { 'pg_format' },
       -- Conform can also run multiple formatters sequentially
