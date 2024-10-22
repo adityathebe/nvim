@@ -132,6 +132,7 @@ return {
           },
         },
       },
+      rust_analyzer= {},
       marksman = {},
       ts_ls = {},
       yamlls = {

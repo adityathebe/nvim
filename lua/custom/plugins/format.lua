@@ -36,6 +36,7 @@ return { -- Autoformat
       go = { 'goimports', 'gofmt', 'golines' },
       yaml = { 'prettier' },
       sql = { 'pg_format' },
+      rust = { 'rustfmt' },
       -- Conform can also run multiple formatters sequentially
       -- python = { "isort", "black" },
       --
