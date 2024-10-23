@@ -22,3 +22,7 @@ vim.keymap.set('n', '<M-t>', '<C-W>+')
 vim.keymap.set('n', '<M-s>', '<C-W>-')
 
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
+
+-- Buffers navigation
+vim.keymap.set('n', ']b', '<cmd> bnext<CR>', { desc = "[B]uffer [N]ext" })
+vim.keymap.set('n', '[b', '<cmd> bprevious<CR>', { desc = "[B]uffer [P]rev" })
