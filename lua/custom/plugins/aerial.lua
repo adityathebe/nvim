@@ -1,7 +1,7 @@
 return {
   'stevearc/aerial.nvim',
   opts = {
-    layout = {
+    layout         = {
       default_direction = 'left',
 
       -- min_width and max_width can be a list of mixed types.
@@ -9,10 +9,14 @@ return {
       max_width = { 60, 0.2 },
       min_width = 50,
     },
-
-    auto_jump = true,
-    lazy_load = false,
+    auto_jump      = true,
+    lazy_load      = false,
     open_automatic = true,
+    ignore         = {
+      filetypes = {
+        "gomod",
+      },
+    },
   },
   lazy = false,
   -- Optional dependencies
