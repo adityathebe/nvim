@@ -46,6 +46,8 @@ return {
 
         map('K', vim.lsp.buf.hover, 'Hover')
 
+        map('<leader>ld', vim.diagnostic.open_float, '[L]SP [D]iagnostic')
+
         -- Rename the variable under your cursor.
         --  Most Language Servers support renaming across files, etc.
         map('<leader>lr', vim.lsp.buf.rename, '[R]ename')
@@ -132,7 +134,7 @@ return {
           },
         },
       },
-      rust_analyzer= {},
+      rust_analyzer = {},
       marksman = {},
       ts_ls = {},
       yamlls = {
