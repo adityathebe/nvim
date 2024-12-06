@@ -28,7 +28,7 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       markdown = { 'prettier' },
-      go = { 'goimports', 'gofmt', 'golines' },
+      go = { 'goimports', 'gofmt' },
       yaml = { 'prettier' },
       sql = { 'pg_format' },
       rust = { 'rustfmt' },

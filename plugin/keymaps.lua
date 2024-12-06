@@ -26,3 +26,6 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 -- Buffers navigation
 vim.keymap.set('n', ']b', '<cmd> bnext<CR>', { desc = "[B]uffer [N]ext" })
 vim.keymap.set('n', '[b', '<cmd> bprevious<CR>', { desc = "[B]uffer [P]rev" })
+vim.keymap.set('n', '<leader>bc', function()
+  vim.cmd('%bd|e#|bd#')
+end, { desc = "[B]uffer [C]lose rest" })
