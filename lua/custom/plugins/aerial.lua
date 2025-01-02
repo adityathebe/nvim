@@ -2,7 +2,7 @@ return {
   'stevearc/aerial.nvim',
   opts = {
     layout    = {
-      default_direction = 'left',
+      default_direction = 'right',
 
       -- min_width and max_width can be a list of mixed types.
       -- max_width = {40, 0.2} means "the lesser of 40 columns or 20% of total"
