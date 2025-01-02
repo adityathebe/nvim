@@ -13,11 +13,11 @@ return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
-    options = {
+    options    = {
       theme = 'auto',
       globalstatus = true,
     },
-    sections = {
+    sections   = {
       lualine_a = { 'mode' },
       lualine_b = {
         'branch',
@@ -41,18 +41,18 @@ return {
       lualine_y = { 'progress' },
       lualine_z = { 'location' }
     },
-    tabline = {
-      lualine_a = { 'buffers' },
-      lualine_b = {},
-      lualine_c = {},
-      lualine_x = {},
-      lualine_y = {
-        {
-          'aerial',
-          sep = ' | '
-        },
-      },
-    },
+    -- tabline = {
+    --   lualine_a = { 'buffers' },
+    --   lualine_b = {},
+    --   lualine_c = {},
+    --   lualine_x = {},
+    --   lualine_y = {
+    --     {
+    --       'aerial',
+    --       sep = ' | '
+    --     },
+    --   },
+    -- },
     extensions = { 'lazy' },
   },
 }
