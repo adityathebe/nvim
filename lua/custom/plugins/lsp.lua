@@ -2,6 +2,10 @@ return {
   -- Main LSP Configuration
   'neovim/nvim-lspconfig',
   dependencies = {
+    { 'mason-org/mason.nvim', config = true },
+    'mason-org/mason-lspconfig.nvim',
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+
     -- Useful status updates for LSP.
     { 'j-hui/fidget.nvim', opts = {} },
 
@@ -9,7 +13,7 @@ return {
     'hrsh7th/cmp-nvim-lsp',
 
     -- Schema information
-    "b0o/SchemaStore.nvim",
+    'b0o/SchemaStore.nvim',
   },
   config = function()
     --  This function gets run when an LSP attaches to a particular buffer.
@@ -129,7 +133,7 @@ return {
         },
         settings = {
           json = {
-            schemas = require("schemastore").json.schemas(),
+            schemas = require('schemastore').json.schemas(),
             validate = { enable = true },
           },
         },
@@ -142,12 +146,12 @@ return {
           yaml = {
             schemaStore = {
               enable = false,
-              url = "",
+              url = '',
             },
           },
         },
         schemas = {
-          ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+          ['https://json.schemastore.org/github-workflow.json'] = '/.github/workflows/*',
         },
       },
       gopls = {
@@ -179,10 +183,35 @@ return {
       },
     }
 
-    -- setup their capabilities
-    for server_name, server in pairs(servers) do
-      server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-      require('lspconfig')[server_name].setup(server)
-    end
+    -- Ensure the servers and tools above are installedAdd commentMore actions
+    --  To check the current status of installed tools and/or manually install
+    --  other tools, you can run
+    --    :Mason
+    --
+    --  You can press `g?` for help in this menu.
+    require('mason').setup()
+
+    -- You can add other tools here that you want Mason to install
+    -- for you, so that they are available from within Neovim.
+    local ensure_installed = vim.tbl_keys(servers or {})
+    vim.list_extend(ensure_installed, {
+      'stylua', -- Used to format Lua code
+    })
+    require('mason-tool-installer').setup {
+      ensure_installed = ensure_installed,
+    }
+
+    require('mason-lspconfig').setup {
+      handlers = {
+        function(server_name)
+          local server = servers[server_name] or {}
+          -- This handles overriding only values explicitly passed
+          -- by the server configuration above. Useful when disabling
+          -- certain features of an LSP (for example, turning off formatting for ts_ls)
+          server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+          require('lspconfig')[server_name].setup(server)
+        end,
+      },
+    }
   end,
 }
