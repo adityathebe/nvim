@@ -22,6 +22,19 @@ vim.opt.updatetime = 250
 vim.opt.wrap = true
 vim.opt.wrapmargin = 0
 
+-- Use Neovim's built-in Markdown injection query instead of nvim-treesitter's.
+do
+  local path = vim.env.VIMRUNTIME .. '/queries/markdown/injections.scm'
+  vim.treesitter.query.set('markdown', 'injections', table.concat(vim.fn.readfile(path), '\n'))
+end
+
+-- Use Neovim's built-in Treesitter highlighting.
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function(args)
+    pcall(vim.treesitter.start, args.buf)
+  end,
+})
+
 -- search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

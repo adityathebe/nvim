@@ -1,8 +1,8 @@
-return { -- Highlight, edit, and navigate code
+return { -- Parser installer/query provider; highlighting is handled by Neovim core
   'nvim-treesitter/nvim-treesitter',
+  branch = 'master',
   build = ':TSUpdate',
-  main = 'nvim-treesitter.configs', -- Sets main module to use for opts
-  -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
+  main = 'nvim-treesitter.configs',
   opts = {
     ensure_installed = {
       'bash',
@@ -11,16 +11,14 @@ return { -- Highlight, edit, and navigate code
       'html',
       'lua',
       'luadoc',
-      'markdown',
-      'markdown_inline',
       'query',
       'vim',
       'vimdoc',
     },
-    -- Autoinstall languages that are not installed
-    auto_install = true,
+    auto_install = false,
+    ignore_install = { 'markdown', 'markdown_inline' },
     highlight = {
-      enable = true,
+      enable = false,
     },
   },
 }
