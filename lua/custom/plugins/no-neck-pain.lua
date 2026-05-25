@@ -1,17 +1,18 @@
 return {
-  "shortcuts/no-neck-pain.nvim",
+  'shortcuts/no-neck-pain.nvim',
+  enabled = false,
   opts = {
-    version = "*", -- stable
-    width = 127,
+    version = '*', -- stable
+    width = 160,
     integrations = {
       aerial = {
-        position = "right",
+        position = 'right',
         reopen = true,
       },
-    }
+    },
   },
   config = function(_, opts)
-    require("no-neck-pain").setup(opts)
-    require("no-neck-pain").toggle() -- Enable Zen mode by default
+    require('no-neck-pain').setup(opts)
+    require('no-neck-pain').toggle() -- Enable Zen mode by default
   end,
 }
