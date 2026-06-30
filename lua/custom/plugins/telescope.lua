@@ -89,6 +89,7 @@ return { -- Fuzzy Finder (files, lsp, etc)
     -- vim.keymap.set('n', '<leader>fw', builtin.live_grep, { desc = '[F]ind by [W]ord' })
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = '[F]ind [D]iagnostics' })
     vim.keymap.set('n', '<leader>fg', builtin.git_status, { desc = '[F]ind [G]it status' })
+    vim.keymap.set('n', '<leader>fq', builtin.quickfix, { desc = '[Q]uick [F]ix' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
     vim.keymap.set('n', '<leader>fw', ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>")
 
