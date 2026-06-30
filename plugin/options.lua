@@ -22,6 +22,14 @@ vim.opt.updatetime = 250
 vim.opt.wrap = true
 vim.opt.wrapmargin = 0
 
+-- Treesitter folding
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldenable = true
+vim.opt.foldlevelstart = 99
+vim.opt.foldminlines = 2
+vim.opt.foldcolumn = '0'
+
 -- Use Neovim's built-in Markdown injection query instead of nvim-treesitter's.
 do
   local path = vim.env.VIMRUNTIME .. '/queries/markdown/injections.scm'
